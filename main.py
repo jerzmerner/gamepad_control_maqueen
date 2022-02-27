@@ -1,7 +1,7 @@
 def ControlRightMotor(x: number, y: number):
     return int(rMotorMap[Math.idiv(y - 500, 175) + 2][Math.idiv(x - 500, 175) + 2] * 255)
 def ControlLeftMotor(x2: number, y2: number):
-    return int(rMotorMap[Math.idiv(x2 - 500, 175) + 2][Math.idiv(y2 - 500, 175) + 2] * 255)
+    return int(lMotorMap[Math.idiv(y2 - 500, 175) + 2][Math.idiv(x2 - 500, 175) + 2] * 255)
 rMotorMap: List[List[number]] = []
 lMotorMap: List[List[number]] = []
 radio.set_group(1)
@@ -15,7 +15,7 @@ lMotorMap = [[-1, -1, -1, -0.5, 0],
     [-0.5, 0, 0.5, 0.75, 1],
     [0, 0.5, 1, 1, 1]]
 rMotorMap = [[0, -0.5, -1, -1, -1],
-    [0.5, 0, -0.5, -1, -1],
+    [0.5, 0, -0.5, -.75, -1],
     [1, 0.5, 0, -0.5, -1],
     [1, 0.75, 0.5, 0, -0.5],
     [1, 1, 1, 0.5, 0]]

@@ -3,7 +3,7 @@ function ControlRightMotor(x: number, y: number): number {
 }
 
 function ControlLeftMotor(x2: number, y2: number): number {
-    return Math.trunc(rMotorMap[Math.idiv(x2 - 500, 175) + 2][Math.idiv(y2 - 500, 175) + 2] * 255)
+    return Math.trunc(lMotorMap[Math.idiv(y2 - 500, 175) + 2][Math.idiv(x2 - 500, 175) + 2] * 255)
 }
 
 let rMotorMap : number[][] = []
@@ -14,7 +14,7 @@ pins.setPull(DigitalPin.P14, PinPullMode.PullNone)
 pins.setPull(DigitalPin.P15, PinPullMode.PullNone)
 pins.setPull(DigitalPin.P16, PinPullMode.PullNone)
 lMotorMap = [[-1, -1, -1, -0.5, 0], [-1, -0.75, -0.5, 0, 0.5], [-1, -0.5, 0, 0.5, 1], [-0.5, 0, 0.5, 0.75, 1], [0, 0.5, 1, 1, 1]]
-rMotorMap = [[0, -0.5, -1, -1, -1], [0.5, 0, -0.5, -1, -1], [1, 0.5, 0, -0.5, -1], [1, 0.75, 0.5, 0, -0.5], [1, 1, 1, 0.5, 0]]
+rMotorMap = [[0, -0.5, -1, -1, -1], [0.5, 0, -0.5, -.75, -1], [1, 0.5, 0, -0.5, -1], [1, 0.75, 0.5, 0, -0.5], [1, 1, 1, 0.5, 0]]
 basic.forever(function on_forever() {
     if (pins.digitalReadPin(DigitalPin.P15) == 0) {
         radio.sendString("Open")
