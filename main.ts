@@ -1,12 +1,9 @@
 function ControlRightMotor(x: number, y: number): number {
-    return Math.trunc(rMotorMap[Math.idiv(y - 500, 103) + 4.5][Math.idiv(x - 500, 103) + 4.5] * 255)
+    return Math.trunc(rMotorMap[Math.idiv(y - 500, 114) + 4.5][Math.idiv(x - 500, 114) + 4.5] * 255)
 }
 
 function ControlLeftMotor(x2: number, y2: number): number {
-    serial.writeValue("x2", Math.idiv(x2 - 500, 103) + 4.5)
-    serial.writeValue("y2", Math.idiv(y2 - 500, 103) + 4.5)
-    serial.writeValue("mapVal", Math.trunc(lMotorMap[Math.idiv(y2 - 500, 103) + 4.5][Math.idiv(x2 - 500, 103) + 4.5] * 255))
-    return Math.trunc(lMotorMap[Math.idiv(y2 - 500, 103) + 4.5][Math.idiv(x2 - 500, 103) + 4.5] * 255)
+    return Math.trunc(lMotorMap[Math.idiv(y2 - 500, 114) + 4.5][Math.idiv(x2 - 500, 114) + 4.5] * 255)
 }
 
 let rMotorMap : number[][] = []

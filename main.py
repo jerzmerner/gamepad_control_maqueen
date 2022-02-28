@@ -1,11 +1,7 @@
 def ControlRightMotor(x: number, y: number):
-    return int(rMotorMap[Math.idiv(y - 500, 103) + 4.5][Math.idiv(x - 500, 103) + 4.5] * 255)
+    return int(rMotorMap[Math.idiv(y - 500, 114) + 4.5][Math.idiv(x - 500, 114) + 4.5] * 255)
 def ControlLeftMotor(x2: number, y2: number):
-    serial.write_value("x2", Math.idiv(x2 - 500, 103) + 4.5)
-    serial.write_value("y2", Math.idiv(y2 - 500, 103) + 4.5)
-    serial.write_value("mapVal",
-        int(lMotorMap[Math.idiv(y2 - 500, 103) + 4.5][Math.idiv(x2 - 500, 103) + 4.5] * 255))
-    return int(lMotorMap[Math.idiv(y2 - 500, 103) + 4.5][Math.idiv(x2 - 500, 103) + 4.5] * 255)
+    return int(lMotorMap[Math.idiv(y2 - 500, 114) + 4.5][Math.idiv(x2 - 500, 114) + 4.5] * 255)
 rMotorMap: List[List[number]] = []
 lMotorMap: List[List[number]] = []
 radio.set_group(1)
