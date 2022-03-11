@@ -2,10 +2,9 @@ input.onButtonPressed(Button.A, function () {
     radio.sendString("neoPixelR")
 })
 input.onButtonPressed(Button.AB, function () {
-    radio.sendString("neoPixelB")
+    music.playMelody("E D G F B A C5 B ", 120)
 })
 input.onButtonPressed(Button.B, function () {
-    radio.sendString("neoPixelG")
     radio.sendString("Hiii")
 })
 function ControlMotor (x: number, y: number, motor: string) {
