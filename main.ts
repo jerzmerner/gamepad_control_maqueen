@@ -1,8 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    radio.sendString("neoPixelR")
-})
-input.onButtonPressed(Button.AB, function () {
-    music.playMelody("E D G F B A C5 B ", 120)
+    music.playMelody("C F E B D G A C5 ", 127)
 })
 input.onButtonPressed(Button.B, function () {
     radio.sendString("Hiii")
